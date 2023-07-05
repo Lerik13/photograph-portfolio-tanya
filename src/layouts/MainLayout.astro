@@ -1,0 +1,38 @@
+---
+
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	data: {},
+	robots?: boolean;
+}
+
+const {
+	title = 'portfolio - Tatiana Alita photographer',
+	description = "Tatiana Alita - professional photographer",
+	image,
+	data,
+	robots
+} = Astro.props as Props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name= "description" content={description} />
+		<title>{title}</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Bona+Nova&family=Montserrat&family=Permanent+Marker&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<main>
+			<slot>Default Text</slot>
+		</main>
+	</body>
+</html>
