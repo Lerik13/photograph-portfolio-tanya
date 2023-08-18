@@ -1,0 +1,49 @@
+---
+import phoneData from "../data/phoneData"
+---
+
+<nav class="relative lg:container mx-auto p-6">
+	<!-- Flex container -->
+	<div class="flex items-center justify-between">
+		<!-- Logo -->
+		<a href="#" class="flex justify-center">
+			<img src="/logo0.svg" alt="Logo" width="100px" />
+		</a>
+		<!-- Menu Items -->
+		<ul class="hidden md:flex space-x-3 lg:space-x-10 pl-2">
+			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray">Обо мне</a></li>
+			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray">Форматы съемок</a></li>
+			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray">Фотостудии</a></li>
+			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray">Отзывы</a></li>
+			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray">Контакты</a></li>
+		</ul>
+		<!-- Phone number -->
+		<a href=`tel:${phoneData.value}` class="hidden md:flex p-3 pr-0 items-start gap-0.5">
+			<img src="/phone.svg" alt="phone" width="18px" class="pt-[2px]" />
+			<span>{phoneData.text}</span>
+		</a>
+
+		<!-- Hamburger Icon -->
+		<button id="menu-btn" class="block hamburger focus:outline-none md:hidden">
+			<span class="hamburger-top"></span>
+			<span class="hamburger-middle"></span>
+			<span class="hamburger-bottom"></span>
+		</button>
+
+		<!-- Mobile Menu -->
+		<div id="mobile-menu" class="md:hidden">
+			<div id="menu-shadow"class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-0"></div>
+			<ul id="menu"class="hidden fixed flex-col items-left self-end px-10 pt-20 space-y-6 bg-navGray min-w-min h-screen top-0 right-[-220px] drop-shadow-md duration-300 transition">
+				<li><a href="#" class="nav-link hover:text-brightRed">Обо мне</a></li>
+				<li><a href="#" class="nav-link hover:text-brightRed">Форматы съемок</a></li>
+				<li><a href="#" class="nav-link hover:text-brightRed">Фотостудии</a></li>
+				<li><a href="#" class="nav-link hover:text-brightRed">Отзывы</a></li>
+				<li><a href="#" class="nav-link hover:text-brightRed">Контакты</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script>
+	import "../js/nav.js"
+</script>

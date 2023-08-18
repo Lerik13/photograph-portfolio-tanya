@@ -1,0 +1,59 @@
+:root {
+	--font-sans: "Montserrat", "Arial", sans-serif;
+	--font-serif: "Bona+Nova", "Times New Roman", serif;
+	--brightRed: hsl(2, 82%, 60%);
+	--darkGray: hsl(0, 0%, 16%);
+	--navGray: hsl(0, 0%, 18%);
+	--veryLightGray: hsl(0, 0%, 98%);
+}
+
+body {
+	//background-color: var(--darkGray);
+	color: var(--veryLightGray);
+}
+
+/* Hamburger Menu */
+.hamburger {
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	transition: all 0.25s;
+	position: absolute;
+	top: 36px;
+	right: 26px;
+	z-index: 2;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 2px;
+	background: var(--veryLightGray);
+	transform: rotate(0);
+	transition: all 0.5s;
+}
+.hamburger-middle {
+	transform: translateY(7px);
+}
+.hamburger-bottom {
+	transform: translateY(14px);
+}
+
+.open {
+	position: fixed;
+	transform: rotate(90deg);
+	transform: translateY(0px);
+}
+.open .hamburger-top {
+	transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-middle {
+	display: none;
+}
+.open .hamburger-bottom {
+	transform: rotate(-45deg) translateY(6px) translate(-6px);
+}

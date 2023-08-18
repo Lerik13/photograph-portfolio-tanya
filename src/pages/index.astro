@@ -1,10 +1,43 @@
 ---
+import Nav from '../components/Nav.astro';
 import MainLayout from "../layouts/MainLayout.astro";
-
 ---
 
 <MainLayout>
-	<h1 class="text-3xl font-bold underline">
-		Hello world!
-	</h1>
+	<Nav />
+
+	<!-- Hero Section -->
+	<section id="hero">
+		<!-- Flex Container -->
+		<div class="container flex flex-col space-y-12 md:space-y-0 md:flex-row items-start md:items-center px-6 mx-auto mt-5">
+			<!-- Left item -->
+			<div class="flex flex-col space-y-12 md:w-1/2">
+				
+				<p class="max-w-sm">
+					Профессиональный фотограф
+				</p>
+				<div class="flex md:justify-end">
+					<h1 class="font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap pr-2">
+						Татьяна Алита
+					</h1>
+				</div>
+				<div class="flex justify-end">
+					<p class="md:max-w-xs">
+						Искусство - не просто увлечение, а моя жизнь.<br />
+						А фотоаппарат это часть меня - моё продолжение.
+					</p>
+				</div>
+				<div class="flex justify-center md:justify-start">
+					<a href="#" class="p-5 baseline border hover:px-6">
+						Записаться на фотосессию
+					</a>
+				</div>
+			</div>
+			<!-- Image -->
+			<div class="md:w-1/2">
+				<img src="img/hero.jpg" alt="Tatiana Anita hero photo" />
+			</div>
+		</div>
+	</section>
+
 </MainLayout>
