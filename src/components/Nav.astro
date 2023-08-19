@@ -11,11 +11,11 @@ import phoneData from "../data/phoneData"
 		</a>
 		<!-- Menu Items -->
 		<ul class="hidden md:flex space-x-3 lg:space-x-10 pl-2">
-			<li><a href="#about" class="border-b-2 border-darkGray hover:border-veryLightGray">Обо мне</a></li>
-			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray">Форматы съемок</a></li>
-			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray">Фотостудии</a></li>
-			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray">Отзывы</a></li>
-			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray">Контакты</a></li>
+			<li><a href="#about" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Обо мне</a></li>
+			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Форматы съемок</a></li>
+			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Фотостудии</a></li>
+			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Отзывы</a></li>
+			<li><a href="#" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Контакты</a></li>
 		</ul>
 		<!-- Phone number -->
 		<a href=`tel:${phoneData.value}` class="hidden md:flex p-3 pr-0 items-start gap-0.5">
@@ -31,9 +31,9 @@ import phoneData from "../data/phoneData"
 		</button>
 
 		<!-- Mobile Menu -->
-		<div id="mobile-menu" class="md:hidden">
-			<div id="menu-shadow"class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-0"></div>
-			<ul id="menu"class="hidden fixed flex-col items-left self-end px-10 pt-20 space-y-6 bg-navGray min-w-min h-screen top-0 right-[-220px] drop-shadow-md duration-300 transition">
+		<div id="slideover-container" class="fixed inset-0 w-full h-full invisible">
+			<div id="slideover-bg"class="absolute inset-0 w-full h-full bg-gray-900 opacity-0 z-0 duration-500 ease-out transition-all"></div>
+			<ul id="slideover"class="absolute w-56 h-full flex-col items-left self-end px-10 pt-20 space-y-10 bg-navGray top-0 right-0 translate-x-full duration-500 ease-out transition-all">
 				<li><a href="#about" class="nav-link hover:text-brightRed">Обо мне</a></li>
 				<li><a href="#" class="nav-link hover:text-brightRed">Форматы съемок</a></li>
 				<li><a href="#" class="nav-link hover:text-brightRed">Фотостудии</a></li>

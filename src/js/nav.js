@@ -1,24 +1,21 @@
-const btn = document.getElementById('menu-btn');
-const nav = document.getElementById('menu');
-const nav_shadow = document.getElementById('menu-shadow');
+const menu_btn = document.getElementById('menu-btn');
 
-function openMenu() {}
-function closeMenu() {}
-
-const toggleMenu = () => {
-	btn.classList.toggle('open');
-	nav_shadow.classList.toggle('block');
-	nav_shadow.classList.toggle('hidden');
-	nav.classList.toggle('flex');
-	nav.classList.toggle('hidden');
-	nav.classList.toggle('right-0');
-	nav.classList.toggle('right-[-220px]');
+const toggleSlideover = () => {
+	menu_btn.classList.toggle('open');
+	document.getElementById('slideover-container').classList.toggle('invisible');
+	document.getElementById('slideover-bg').classList.toggle('opacity-0');
+	document.getElementById('slideover-bg').classList.toggle('opacity-50');
+	document.getElementById('slideover').classList.toggle('translate-x-full');
 }
 
-btn.addEventListener('click', () => {
-	toggleMenu();
+menu_btn.addEventListener('click', () => {
+	toggleSlideover();
 })
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-	toggleMenu();
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+	toggleSlideover();
 }))
+
+document.getElementById('slideover-bg').addEventListener('click', () => {
+	toggleSlideover();
+})
