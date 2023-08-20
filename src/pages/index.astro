@@ -16,7 +16,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 				<p class="max-w-sm">
 					Профессиональный фотограф
 				</p>
-				<div class="flex md:justify-end">
+				<div class="animate-hide flex md:justify-end">
 					<h1 class="font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap pr-2">
 						Татьяна Алита
 					</h1>
@@ -47,7 +47,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 			<!-- Left item -->
 			<div class="flex flex-col space-y-12 md:w-1/2">
 				
-				<h2 class="font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap pr-2">
+				<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap pr-2">
 					Обо мне
 				</h2>
 				<blockquote  class="flex justify-start md:justify-center">
@@ -82,30 +82,33 @@ import MainLayout from "../layouts/MainLayout.astro";
 	<section id="features">
 		<!-- Flex Container -->
 		<div class="container flex flex-col space-y-12 px-6 mx-auto mt-20">
-			<h2 class="font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap pr-2 flex flex-col">
+			<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap pr-2 flex flex-col">
 				Фотосессия
 				<span class="ml-20">со мной, это:</span>
 			</h2>
 			<div class="flex flex-col md:flex-row gap-8 md:gap-4">
-				<div>
-					<h6 class="font-serif text-2xl mb-5">
-						<span class="pb-2 border-b border-veryLightGray">Высокое качество фото</span>
+				<div class="feature animate-hide">
+					<h6 class="font-serif text-2xl mb-5 flex flex-col space-y-2 w-fit">
+						<span class="">Высокое качество фото</span>
+						<span class="border-b border-veryLightGray"></span>
 					</h6>
 					<p>
 						За 9 лет я обработала более 30 000 фотографий. И работаю только на профессиональном оборудовании.
 					</p>
 				</div>
-				<div>
-					<h6 class="font-serif text-2xl mb-5">
-						<span class="pb-2 border-b border-veryLightGray">Индивидуальный подход</span>
+				<div class="feature animate-hide">
+					<h6 class="font-serif text-2xl mb-5 flex flex-col space-y-2 w-fit">
+						<span class="">Индивидуальный подход</span>
+						<span class="border-b border-veryLightGray"></span>
 					</h6>
 					<p>
 						Если у вас нет опыта в съемках, то это не страшно. Я помогу в позировании на протяжении всей фотосессии.
 					</p>
 				</div>
-				<div>
-					<h6 class="font-serif text-2xl mb-5">
-						<span class="pb-2 border-b border-veryLightGray">Помощь в подборе локации</span>
+				<div class="feature animate-hide">
+					<h6 class="font-serif text-2xl mb-5 flex flex-col space-y-2 w-fit">
+						<span class="">Помощь в подборе локации</span>
+						<span class="border-b border-veryLightGray"></span>
 					</h6>
 					<p>
 						Я помогу подобрать проверенную студию для съемок и знаю, где лучше всего пройдёт уличная фотосессия.
@@ -116,3 +119,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 	</section>
 
 </MainLayout>
+
+<script>
+	import "../js/animation.js"
+</script>
