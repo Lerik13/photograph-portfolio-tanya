@@ -1,5 +1,6 @@
 ---
 import Nav from '../components/Nav.astro';
+import TabPhoto from '../components/TabPhoto.astro';
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
@@ -9,7 +10,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 	<!-- Hero Section -->
 	<section id="hero">
 		<!-- Flex Container -->
-		<div class="container flex flex-col space-y-12 md:space-y-0 md:flex-row items-start md:items-center px-6 mx-auto mt-5">
+		<div class="container flex flex-col space-y-12 md:space-y-0 md:flex-row items-start md:items-center px-6 mx-auto mt-5 md:mt-10">
 			<!-- Left item -->
 			<div class="flex flex-col space-y-12 md:w-1/2">
 				
@@ -45,9 +46,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 		<!-- Flex Container -->
 		<div class="container flex flex-col space-y-12 md:space-y-0 md:flex-row items-start md:items-center px-6 mx-auto mt-20">
 			<!-- Left item -->
-			<div class="flex flex-col space-y-12 md:w-1/2">
-				
-				<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap pr-2">
+			<div class="flex flex-col space-y-12 md:w-1/2 pr-2">
+				<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap md:pr-2">
 					Обо мне
 				</h2>
 				<blockquote  class="flex justify-start md:justify-center">
@@ -72,8 +72,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 				</div>
 			</div>
 			<!-- Image -->
-			<div class="md:w-1/2">
-				<img src="img/about.jpg" alt="Tatiana Anita about picture" />
+			<div class="md:w-1/2 overflow-hidden lg:h-[46rem]">
+				<img src="img/about.jpg" alt="Tatiana Anita about picture" class="object-cover w-full h-full" />
 			</div>
 		</div>
 	</section>
@@ -118,8 +118,105 @@ import MainLayout from "../layouts/MainLayout.astro";
 		</div>
 	</section>
 
+	<section id="formats-photoshoots">
+		<div class="container flex flex-col space-y-12 px-6 mx-auto mt-20">
+			<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap pr-2 flex flex-col">
+				Форматы съемок
+			</h2>
+
+			<div 
+				role="tablist"
+				aria-label="tabs"
+				class="w-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-3 col-auto items-center px-[3px] overflow-hidden transition"
+			>
+				<button
+					role="tab"
+					aria-selected="true"
+					aria-controls="panel-studio"
+					id="tab-studio"
+					tabindex="0"
+					class="h-10 px-6 tab border-b border-brightRed text-brightRed"
+				>
+					Студийная
+				</button>
+				<button
+					role="tab"
+					aria-selected="false"
+					aria-controls="panel-family"
+					id="tab-family"
+					tabindex="-1"
+					class="h-10 px-6 tab border-b border-veryLightGray"
+				>
+					Семейная
+				</button>
+				<button
+					role="tab"
+					aria-selected="false"
+					aria-controls="panel-walk"
+					id="tab-walk"
+					tabindex="-1"
+					class="h-10 px-6 tab border-b border-veryLightGray"
+				>
+					Фотопрогулка
+				</button>
+				<button
+					role="tab"
+					aria-selected="false"
+					aria-controls="panel-child"
+					id="tab-child"
+					tabindex="-1"
+					class="h-10 px-6 tab border-b border-veryLightGray"
+				>
+					Детская
+				</button>
+			</div>
+			<!-- Tab Content -->
+			<div class="mt-6 relative">
+				<TabPhoto
+					id="panel-studio"
+					image0="img/formats/studio/0.jpg"
+					image1="img/formats/studio/1.jpg"
+					image2="img/formats/studio/2.jpg"
+					image3="img/formats/studio/03.jpg"
+					image4="img/formats/studio/04.jpg"
+					href="#"
+					active={true}
+				/>
+				<TabPhoto
+					id="panel-family"
+					image0="img/formats/family/0.jpg"
+					image1="img/formats/family/1.jpg"
+					image2="img/formats/family/3.jpg"
+					image3="img/formats/family/2.jpg"
+					image4="img/formats/family/4.jpg"
+					href="#"
+				/>
+				<TabPhoto
+					id="panel-walk"
+					image0="img/formats/walk/0.jpg"
+					image1="img/formats/walk/1.jpg"
+					image2="img/formats/walk/2.jpg"
+					image3="img/formats/walk/03.jpg"
+					image4="img/formats/walk/4.jpg"
+					href="#"
+				/>
+				<TabPhoto
+					id="panel-child"
+					image0="img/formats/child/0.jpg"
+					image1="img/formats/child/1.jpg"
+					image2="img/formats/child/4.jpg"
+					image3="img/formats/child/2.jpg"
+					image4="img/formats/child/3.jpg"
+					href="#"
+				/>
+			</div>
+
+		</div>
+	</section>
+
 </MainLayout>
 
 <script>
-	import "../js/animation.js"
+	import "../js/animation.js";
+	import "../js/tabs.js";
 </script>

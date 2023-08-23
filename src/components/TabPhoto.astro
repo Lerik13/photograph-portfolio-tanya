@@ -1,0 +1,52 @@
+---
+interface Props {
+	id: string;
+	href: string;
+	active?: boolean;
+	image0: string;
+	image1: string;
+	image2: string;
+	image3: string;
+	image4: string;
+}
+
+const {
+	id,
+	href,
+	active = false,
+	image0,
+	image1,
+	image2,
+	image3,
+	image4
+} = Astro.props as Props;
+---
+
+<div
+	role="tabpanel"
+	id={id}
+	class={active ? "tab-panel transition duration-300" : "absolute top-0 invisible opacity-0 tab-panel transition duration-300"}
+>
+	<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+		<div class="h-[20rem] md:h-[29rem] lg:h-[33rem] xl:h-[45rem] col-span-2 row-span-2 overflow-hidden">
+			<img src={image0} alt="studio picture" class="object-cover w-full h-full">
+		</div>
+		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
+			<img src={image1} alt="studio picture" class="object-cover w-full h-full">
+		</div>
+		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
+			<img src={image2} alt="studio picture" class="object-cover w-full h-full">
+		</div>
+		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
+			<img src={image3} alt="studio picture" class="object-cover w-full h-full">
+		</div>
+		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
+			<img src={image4} alt="studio picture" class="object-cover w-full h-full">
+		</div>
+	</div>
+	<div class="flex justify-center items-center my-5">
+		<a href={href} class="p-5 baseline border hover:px-6 duration-500 ease-out transition-all">
+			Узнать подробнее
+		</a>
+	</div>
+</div>
