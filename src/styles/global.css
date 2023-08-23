@@ -21,7 +21,7 @@ body {
 	position: absolute;
 	top: 36px;
 	right: 26px;
-	z-index: 2;
+	z-index: 30;
 }
 
 .hamburger-top,
