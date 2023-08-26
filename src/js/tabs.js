@@ -10,6 +10,7 @@ tabs.forEach(tab => {
 			t.classList.add("border-veryLightGray");
 			t.classList.remove("text-brightRed");
 		})
+		tab.classList.remove("border-veryLightGray");
 		tab.classList.add("border-brightRed");
 		tab.classList.add("text-brightRed");
 

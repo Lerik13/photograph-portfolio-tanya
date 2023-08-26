@@ -1,0 +1,52 @@
+---
+interface Props {
+	id: string;
+	header: string;
+	text: string;
+	image1: string;
+	image2: string;
+	image3: string;
+	image4: string;
+	image5: string;
+	image6: string;
+}
+
+const {
+	id,
+	header,
+	text,
+	image1,
+	image2,
+	image3,
+	image4,
+	image5,
+	image6
+} = Astro.props as Props;
+---
+
+<section id={id} class="">
+	<h4 class="font-serif text-2xl mb-2">
+		{header}
+	</h4>
+	<p>{text}</p>
+	<div class="grid grid-cols-2 md:grid-cols-5 grid-rows-2 gap-3 mt-5">
+		<div class="col-span-2 overflow-hidden">
+			<img src={image1} alt=`studio {$name} picture` class="object-cover w-full h-full">
+		</div>
+		<div class="overflow-hidden">
+			<img src={image2} alt=`studio picture` class="object-cover w-full h-full">
+		</div>
+		<div class="hidden md:block col-span-2 overflow-hidden">
+			<img src={image3} alt=`studio picture` class="object-cover w-full h-full">
+		</div>
+		<div class="overflow-hidden">
+			<img src={image4} alt=`studio picture` class="object-cover w-full h-full">
+		</div>
+		<div class="col-span-2 overflow-hidden">
+			<img src={image5} alt=`studio picture` class="object-cover w-full h-full">
+		</div>
+		<div class="col-span-2 overflow-hidden">
+			<img src={image6} alt=`studio picture` class="object-cover w-full h-full">
+		</div>
+	</div>
+</section>

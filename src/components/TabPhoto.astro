@@ -1,4 +1,6 @@
 ---
+import Button from './Button.astro';
+
 interface Props {
 	id: string;
 	href: string;
@@ -29,24 +31,24 @@ const {
 >
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 		<div class="h-[20rem] md:h-[29rem] lg:h-[33rem] xl:h-[45rem] col-span-2 row-span-2 overflow-hidden">
-			<img src={image0} alt="studio picture" class="object-cover w-full h-full">
+			<img src={image0} alt="photo sample" class="object-cover w-full h-full">
 		</div>
 		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
-			<img src={image1} alt="studio picture" class="object-cover w-full h-full">
+			<img src={image1} alt="photo sample" class="object-cover w-full h-full">
 		</div>
 		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
-			<img src={image2} alt="studio picture" class="object-cover w-full h-full">
+			<img src={image2} alt="photo sample" class="object-cover w-full h-full">
 		</div>
 		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
-			<img src={image3} alt="studio picture" class="object-cover w-full h-full">
+			<img src={image3} alt="photo sample" class="object-cover w-full h-full">
 		</div>
 		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
-			<img src={image4} alt="studio picture" class="object-cover w-full h-full">
+			<img src={image4} alt="photo sample" class="object-cover w-full h-full">
 		</div>
 	</div>
 	<div class="flex justify-center items-center my-5">
-		<a href={href} class="p-5 baseline border hover:px-6 duration-500 ease-out transition-all">
+		<!--a href={href} class="p-5 baseline border hover:px-6 hover:border-brightRed duration-500 ease-out transition-all">
 			Узнать подробнее
-		</a>
+		</a-->
 	</div>
 </div>
