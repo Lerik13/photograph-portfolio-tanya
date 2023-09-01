@@ -1,5 +1,5 @@
 const phoneData = {
-	"text": "+7 923 170 43 53",
-	"value": "+79231704353",
+	"text": "+380 97 729 0137",
+	"value": "+380977290137",
 }
 export default phoneData;
