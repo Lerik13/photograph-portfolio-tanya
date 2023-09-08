@@ -319,9 +319,27 @@ import Button from '../components/Button.astro';
 			</div>
 		</div>
 	</section>
+
+	<!-- Reviews Section -->
+	<section id="reviews" data-anchor="reviews">
+		<div class="container flex flex-col mx-auto mt-20 px-6 space-y-6 md:space-y-12 relative">
+			<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap md:pr-2">
+				Что говорят клиенты
+			</h2>
+			
+			<div class="flex space-x-2 mt-10 overflow-hidden">
+				<div class="reviews flex">
+				</div>
+				<button id="reviews-arrow-right" class="arrow w-[35px] absolute top-[calc(50%+2rem)] -right-3 hover:-right-4 hover:text-brightRed focus:text-brightRed transition-all duration-300 ease-out bg-darkGray rounded-full">
+					<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+				</button>
+			</div>
+		</div>
+	</section>
 </MainLayout>
 
 <script>
 	import "../js/animation.js";
 	import "../js/tabs.js";
+	import "../js/reviews.js";
 </script>
