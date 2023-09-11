@@ -4,6 +4,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import TabPhoto from '../components/TabPhoto.astro';
 import SectionStudio from '../components/SectionStudio.astro';
 import Button from '../components/Button.astro';
+import phoneData from "../data/phoneData"
+import emailData from "../data/emailData"
 ---
 
 <MainLayout>
@@ -333,6 +335,55 @@ import Button from '../components/Button.astro';
 				<button id="reviews-arrow-right" class="arrow w-[35px] absolute top-[calc(50%+2rem)] -right-3 hover:-right-4 hover:text-brightRed focus:text-brightRed transition-all duration-300 ease-out bg-darkGray rounded-full">
 					<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
 				</button>
+			</div>
+		</div>
+	</section>
+
+	<section id="contacts" data-anchor="contacts">
+		<div class="container flex flex-col mx-auto mt-20 px-6 relative">
+			<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap md:pr-2">
+				Контакты
+			</h2>
+			<div class="flex flex-col items-center md:flex-row space-x-0 selection:md:space-x-6 items-start mt-0 md:mt-10">
+				<!-- Left side -->
+				<div class="flex flex-col gap-y-6 w-full md:w-1/2 md:min-w-[280px] my-10 md:mt-0">
+					<div class="flex flex-col gap-y-1 mt-3">
+						<a href=`tel:${phoneData.value}` class="text-xl" >
+							<span>{phoneData.text}</span>
+						</a>
+						<a href=`email:${emailData.value}` class="text-xl" >
+							<span>{emailData.text}</span>
+						</a>
+					</div>
+					<div class="flex flex-col gap-y-1">
+						<span>г. Санкт-Петербург</span>
+						<span>м. Московская</span>
+						<span>ул. Авиационная, дом 2</span>
+					</div>
+					<div class="flex gap-x-4">
+						<a href='#' target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+							<img src="/logo-vk.svg" alt="vk" width="20px" class="" />
+						</a>
+						<a href='https://www.facebook.com/tatiana.alita' target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+							<img src="/logo-facebook.svg" alt="facebook" width="20px" class="" />
+						</a>
+						<a href='https://www.instagram.com/tatiana.photografi' target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+							<img src="/logo-instagram.svg" alt="instagram" width="30px" class="" />
+						</a>
+						<a href=`tel:${phoneData.value}` class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+							<img src="/logo-phone.svg" alt="phone" width="30px" class="pl-[6px]" />
+						</a>
+					</div>
+				</div>
+				<!-- Right side -->
+				<form action="" class="flex flex-col w-full md:w-1/2">
+					<input class="appearance-none border-b border-veryLightGray w-full py-5 bg-darkGray leading-tight focus:outline-none" id="name" type="text" placeholder="Ваше имя">
+					<input class="appearance-none border-b border-veryLightGray w-full py-5 bg-darkGray leading-tight focus:outline-none" id="phone" type="text" placeholder="+7 (999) 999-99-99">
+					<textarea id="question" rows="3" class="w-full bg-darkGray border-b border-veryLightGray py-5 focus:outline-none" placeholder="Ваш вопрос" required></textarea>
+					<div class="flex justify-center md:justify-start mt-8">
+						<Button href="#" text="Отправить" isSubmit={true} />
+					</div>
+				</form>
 			</div>
 		</div>
 	</section>
