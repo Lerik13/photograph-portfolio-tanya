@@ -1,5 +1,5 @@
 ---
-import phoneData from "../data/phoneData"
+import contactData from "../data/contactData"
 ---
 
 <nav class="relative lg:container mx-auto p-6">
@@ -18,9 +18,9 @@ import phoneData from "../data/phoneData"
 			<li><a href="#contacts" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Контакты</a></li>
 		</ul>
 		<!-- Phone number -->
-		<a href=`tel:${phoneData.value}` class="hidden md:flex p-3 pr-0 items-start gap-0.5">
+		<a href=`tel:${contactData.phoneValue}` class="hidden md:flex p-3 pr-0 items-start gap-0.5">
 			<img src="/phone.svg" alt="phone" width="18px" class="pt-[2px]" />
-			<span>{phoneData.text}</span>
+			<span>{contactData.phoneText}</span>
 		</a>
 
 		<!-- Hamburger Icon -->

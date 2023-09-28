@@ -4,8 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import TabPhoto from '../components/TabPhoto.astro';
 import SectionStudio from '../components/SectionStudio.astro';
 import Button from '../components/Button.astro';
-import phoneData from "../data/phoneData"
-import emailData from "../data/emailData"
+import contactData from "../data/contactData";
 ---
 
 <MainLayout>
@@ -33,7 +32,7 @@ import emailData from "../data/emailData"
 					</p>
 				</div>
 				<div class="flex justify-center md:justify-start">
-					<Button href="#" text="Записаться на фотосессию" />
+					<Button href="#contacts" text="Записаться на фотосессию" />
 				</div>
 			</div>
 			<!-- Image -->
@@ -227,7 +226,7 @@ import emailData from "../data/emailData"
 						<img src="img/work-steps.jpg" alt="Work Steps of Photographer" class="object-cover w-full h-full md:min-h-[400px] lg:max-h-[420px]" />
 					</div>
 					<div class="flex justify-center md:justify-start">
-						<Button href="#" text="Записаться на фотосессию" />
+						<Button href="#contacts" text="Записаться на фотосессию" />
 					</div>
 				</div>
 				<!-- Right side -->
@@ -317,7 +316,7 @@ import emailData from "../data/emailData"
 				image6="img/studios/ellen/6.jpg"
 			/>
 			<div class="flex justify-center">
-				<Button href="#" text="Записаться на фотосессию" />
+				<Button href="#contacts" text="Записаться на фотосессию" />
 			</div>
 		</div>
 	</section>
@@ -349,11 +348,11 @@ import emailData from "../data/emailData"
 				<!-- Left side -->
 				<div class="flex flex-col gap-y-6 w-full md:w-1/2 md:min-w-[280px] my-10 md:mt-0">
 					<div class="flex flex-col gap-y-1 mt-3">
-						<a href=`tel:${phoneData.value}` class="text-xl" >
-							<span>{phoneData.text}</span>
+						<a href=`tel:${contactData.phoneValue}` class="text-xl" >
+							<span>{contactData.phoneText}</span>
 						</a>
-						<a href=`email:${emailData.value}` class="text-xl" >
-							<span>{emailData.text}</span>
+						<a href=`email:${contactData.email}` class="text-xl" >
+							<span>{contactData.email}</span>
 						</a>
 					</div>
 					<div class="flex flex-col gap-y-1">
@@ -362,16 +361,16 @@ import emailData from "../data/emailData"
 						<span>ул. Авиационная, дом 2</span>
 					</div>
 					<div class="flex gap-x-4">
-						<a href='#' target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+						<a href=`${contactData.vk}` target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
 							<img src="/logo-vk.svg" alt="vk" width="20px" class="" />
 						</a>
-						<a href='https://www.facebook.com/tatiana.alita' target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+						<a href=`${contactData.facebook}` target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
 							<img src="/logo-facebook.svg" alt="facebook" width="20px" class="" />
 						</a>
-						<a href='https://www.instagram.com/tatiana.photografi' target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+						<a href=`${contactData.instagram}` target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
 							<img src="/logo-instagram.svg" alt="instagram" width="30px" class="" />
 						</a>
-						<a href=`tel:${phoneData.value}` class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+						<a href=`tel:${contactData.phoneValue}` class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
 							<img src="/logo-phone.svg" alt="phone" width="30px" class="pl-[6px]" />
 						</a>
 					</div>
@@ -395,7 +394,7 @@ import emailData from "../data/emailData"
 			<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap md:pr-2">
 				F.A.Q.
 			</h2>
-			<ul class="faq flex flex-col gap-y-1 mt-10 border-b border-b rightRed">
+			<ul class="faq flex flex-col gap-y-1 mt-10 border-b border-brightRed">
 			</ul>
 		</div>
 	</section>

@@ -1,10 +1,12 @@
+let question_open;
+
 function loadFAQ(faq) {
 	return `
 		<li class="border-t border-brightRed py-4">
-			<a href="#" class="faq_question font-serif text-xl">
+			<a id="${faq.id}" href="#" class="faq_question font-serif text-xl">
 				${faq.question}
 			</a>
-			<div class="faq_answer hidden pt-2 pl-4">
+			<div class="faq_answer hidden pt-2 pl-4 duration-500 ease-out transition-all">
 			${faq.answer}
 			</div>
 		</li>
@@ -26,10 +28,18 @@ async function fetchFAQ() {
 
 		document.querySelectorAll('.faq_question').forEach((faq_question) => {
 			faq_question.addEventListener('click', (e) => {
-				e.preventDefault()
-				document.querySelectorAll('.faq_answer').forEach((faq_answer) => faq_answer.classList.add('hidden'))
-				e.target.nextElementSibling.classList.remove('hidden');
-				//e.target.nextElementSibling.classList.toggle('hidden');
+				e.preventDefault();
+				
+				console.log('e.target.id = '+e.target.id)
+				console.log('question_open = '+question_open)
+				if (e.target.id === question_open) {
+					e.target.nextElementSibling.classList.add('hidden');
+					question_open = null;
+				} else {
+					document.querySelectorAll('.faq_answer').forEach((faq_answer) => {faq_answer.classList.add('hidden');})
+					e.target.nextElementSibling.classList.remove('hidden');
+					question_open = e.target.id;
+				}
 			})
 		})
 		
@@ -40,5 +50,3 @@ async function fetchFAQ() {
 }
 
 fetchFAQ();
-
-

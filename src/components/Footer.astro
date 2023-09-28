@@ -1,0 +1,44 @@
+---
+import contactData from "../data/contactData";
+---
+
+<div class="container flex flex-col md:flex-row items-start px-6 mx-auto mt-20 mb-10 justify-between text-sm gap-4">
+	<div class="flex flex-row gap-4 sm:gap-12 md:gap-20 lg:gap-32">
+		<div class="flex flex-col gap-y-3">
+			<h6 class="text-base font-semibold">TatianaAlita 2023</h6>
+			<ul class="flex flex-col gap-y-2">
+				<li>&copy; Все права защищены</li>
+				<li>Договор оферты</li>
+				<li>Политика<br> конфиденциальности</li>
+			</ul>
+		</div>
+		<div class="flex flex-col gap-y-3">
+			<h6 class="text-base font-semibold">Навигация</h6>
+			<ul class="flex flex-col gap-y-2">
+				<li><a href="#about">Обо мне</a></li>
+				<li><a href="#formats-photoshoots">Форматы съемки</a></li>
+				<li><a href="#studios">Фотостудии</a></li>
+				<li><a href="#reviews">Отзывы</a></li>
+				<li><a href="#contacts">Контакты</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="flex flex-row gap-10 md:gap-10 lg:gap-32">
+		<div class="flex flex-col gap-y-3" >
+			<h6 class="text-base font-semibold">Соц.сети</h6>
+			<ul class="flex flex-col gap-y-2">
+				<li><a href=`${contactData.instagram}` target="blank">INSTAGRAM</a></li>
+				<li><a href=`${contactData.vk}` target="blank">VKONTAKTE</a></li>
+				<li><a href=`${contactData.whatsapp}` target="blank">WHATSAPP</a></li>
+				<li><a href=`${contactData.viber}` target="blank">VIBER</a></li>
+			</ul>
+		</div>
+		<div class="flex flex-col gap-y-3" >
+			<h6 class="text-base font-semibold">Контакты</h6>
+			<ul class="flex flex-col gap-y-2">
+				<li><a href=`tel:${contactData.phoneValue}` target="blank">{contactData.phoneText}</a></li>
+				<li><a href=`email:${contactData.email}` target="blank">{contactData.email}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
