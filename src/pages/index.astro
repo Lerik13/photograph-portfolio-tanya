@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon';
+
 import Nav from '../components/Nav.astro';
 import MainLayout from "../layouts/MainLayout.astro";
 import TabPhoto from '../components/TabPhoto.astro';
@@ -361,17 +363,17 @@ import contactData from "../data/contactData";
 						<span>ул. Авиационная, дом 2</span>
 					</div>
 					<div class="flex gap-x-4">
-						<a href=`${contactData.vk}` target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
-							<img src="/logo-vk.svg" alt="vk" width="20px" class="" />
+						<a href=`${contactData.vk}` target="blank" class="flex justify-center items-center bg-darkGray">
+							<Icon name="el:vkontakte" width="36px" class="text-brightRed rounded-full" />
 						</a>
-						<a href=`${contactData.facebook}` target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
-							<img src="/logo-facebook.svg" alt="facebook" width="20px" class="" />
+						<a href=`${contactData.facebook}` target="blank" class="flex justify-center items-center bg-darkGray">
+							<Icon name="simple-icons:facebook" width="36px" class="text-brightRed" />
 						</a>
 						<a href=`${contactData.instagram}` target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
-							<img src="/logo-instagram.svg" alt="instagram" width="30px" class="" />
+							<Icon name="ri:instagram-line" width="32px" class="text-darkGray" />
 						</a>
 						<a href=`tel:${contactData.phoneValue}` class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
-							<img src="/logo-phone.svg" alt="phone" width="30px" class="pl-[6px]" />
+							<Icon name="ri:phone-fill" width="28px" class="text-darkGray" />
 						</a>
 					</div>
 				</div>
