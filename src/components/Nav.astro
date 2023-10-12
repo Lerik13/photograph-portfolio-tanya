@@ -7,20 +7,20 @@ import contactData from "../data/contactData";
 	<!-- Flex container -->
 	<div class="flex items-center justify-between">
 		<!-- Logo -->
-		<a href="#" class="flex justify-center">
+		<a href="/" class="flex justify-center">
 			<img src="/logo0.svg" alt="Logo" width="100px" />
 		</a>
 		<!-- Menu Items -->
 		<ul class="hidden md:flex space-x-3 lg:space-x-10 pl-2">
-			<li><a href="#about" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Обо мне</a></li>
-			<li><a href="#formats-photoshoots" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Форматы съемок</a></li>
-			<li><a href="#studios" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Фотостудии</a></li>
-			<li><a href="#reviews" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Отзывы</a></li>
-			<li><a href="#contacts" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Контакты</a></li>
+			<li><a href="/#about" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Обо мне</a></li>
+			<li><a href="/#formats-photoshoots" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Форматы съемок</a></li>
+			<li><a href="/#studios" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Фотостудии</a></li>
+			<li><a href="/#reviews" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Отзывы</a></li>
+			<li><a href="/#contacts" class="border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Контакты</a></li>
 		</ul>
 		<!-- Phone number -->
-		<a href=`tel:${contactData.phoneValue}` class="hidden md:flex p-3 pr-0 items-start gap-0.5">
-			<Icon name="ri:phone-fill" width="18px" class="pt-[2px]" />
+		<a href=`tel:${contactData.phoneValue}` class="hidden md:flex p-3 pr-0 items-start gap-1">
+			<Icon name="ri:phone-fill" width="18px" class="pt-[3px]" />
 			<span>{contactData.phoneText}</span>
 		</a>
 

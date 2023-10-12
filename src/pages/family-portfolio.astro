@@ -1,0 +1,66 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Nav from '../components/Nav.astro';
+import Portfolio from '../components/Portfolio.astro';
+import PriceListStudio from '../components/PriceListStudio.astro';
+---
+
+<MainLayout title="Семейная cъемка" description="Tatiana Alita - Семейная cъемка">
+	<Nav />
+
+	<div class="container flex space-x-2 mx-auto px-6 mt-20">
+		<a href="./">Главная</a>
+		<span>/</span>
+		<a href="#" class="text-brightRed">Семейная cъемка</a>
+	</div>
+
+	<!-- About Section -->
+	<section id="about" data-anchor="about">
+		<div class="container flex flex-col space-y-12 md:space-y-0 md:flex-row items-start md:items-center px-6 mx-auto mt-10">
+			<!-- Left item -->
+			<div class="flex flex-col space-y-6 md:space-y-12 md:w-2/3 pr-2">
+				<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap md:pr-2">
+					Семейная съемка
+				</h2>
+				<div class="flex flex-col space-y-6">
+					<p>
+						Семейная фотосъемка – один из наиболее трепетных и чувственных жанров. В кругу родных не приходится изображать радость и «рисовать» на своем лице улыбку. Рядом с близкими людьми мы испытываем самые искренние и теплые эмоции, а значит, снимки получаются волшебными, остается лишь придать им легкий антураж.
+					</p>
+				</div>
+			</div>
+			<!-- Image -->
+			<div class="md:w-1/3 overflow-hidden md:h-[20rem] xl:h-[24rem]">
+				<img src="img/portfolio/family/about.jpg" alt="picture in Studio" class="object-cover w-full h-full" />
+			</div>
+		</div>
+	</section>
+
+	<section id="portfolio" data-anchor="portfolio">
+		<div class="container flex flex-col space-y-6 md:space-y-12 px-6 mx-auto mt-20">
+			<h2 class="animate-hide font-serif text-brightRed text-4xl md:text-5xl lg:text-6xl whitespace-nowrap pr-2 flex flex-col">
+				Портфолио
+			</h2>
+			<div class="mt-6">
+				<Portfolio
+					image1="img/portfolio/family/1.jpg"
+					image2="img/portfolio/family/2.jpg"
+					image3="img/portfolio/family/3.jpg"
+					image4="img/portfolio/family/4.jpg"
+					image5="img/portfolio/family/5.jpg"
+					image6="img/portfolio/family/6.jpg"
+					image7="img/portfolio/family/7.jpg"
+					image8="img/portfolio/family/8.jpg"
+					image9="img/portfolio/family/9.jpg"
+					image10="img/portfolio/family/10.jpg"
+					image11="img/portfolio/family/11.jpg"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<PriceListStudio />
+</MainLayout>
+
+<script>
+	import "../js/animation.js";
+</script>

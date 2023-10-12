@@ -86,3 +86,23 @@ body {
 .feature:nth-child(3) {
 	transition-delay: 800ms;
 }
+
+ul.square {
+	//list-style-type: square;
+	list-style: none;
+}
+ul.square li {
+	position: relative;
+	padding-left: 20px;
+}
+ul.square li:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	//background-color: var(--veryLightGray);
+	border: 1px solid var(--veryLightGray);
+}
