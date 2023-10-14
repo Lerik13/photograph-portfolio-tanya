@@ -422,12 +422,12 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 					</div>
 				</div>
 				<!-- Right side -->
-				<form action="" class="flex flex-col w-full md:w-1/2">
-					<input class="appearance-none border-b border-veryLightGray w-full py-5 bg-darkGray leading-tight focus:outline-none" id="name" type="text" placeholder="Ваше имя">
-					<input class="appearance-none border-b border-veryLightGray w-full py-5 bg-darkGray leading-tight focus:outline-none" id="phone" type="text" placeholder="+7 (999) 999-99-99">
-					<textarea id="question" rows="3" class="w-full bg-darkGray border-b border-veryLightGray py-5 focus:outline-none" placeholder="Ваш вопрос" required></textarea>
+				<form name="contact" id="form" method="POST" data-netlify="true" class="flex flex-col w-full md:w-1/2">
+					<input class="appearance-none border-b border-veryLightGray w-full py-5 bg-darkGray leading-tight focus:outline-none" id="name" type="text" placeholder="Ваше имя" required>
+					<input class="appearance-none border-b border-veryLightGray w-full py-5 bg-darkGray leading-tight focus:outline-none" id="phone" type="text" placeholder="+7 (999) 999-99-99" required>
+					<textarea id="question" rows="3" class="w-full bg-darkGray border-b border-veryLightGray py-5 focus:outline-none" placeholder="Ваш вопрос"></textarea>
 					<div class="flex justify-center md:justify-start mt-8">
-						<Button href="#" text="Отправить" isSubmit={true} />
+						<Button text="Отправить" isSubmit={true} />
 					</div>
 				</form>
 			</div>
