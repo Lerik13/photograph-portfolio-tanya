@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import contactData from "../data/contactData";
 ---
 
@@ -38,6 +39,12 @@ import contactData from "../data/contactData";
 			<ul class="flex flex-col gap-y-2">
 				<li><a href=`tel:${contactData.phoneValue}` target="blank">{contactData.phoneText}</a></li>
 				<li><a href=`email:${contactData.email}` target="blank">{contactData.email}</a></li>
+				<li class="flex items-center mt-5 md:mt-10">
+					<span>website developed by</span>
+					<a href=`${contactData.developer}` target="blank" class="flex w-[45px] pl-2">
+						<Image src="/kv-logo.svg" alt="Logo Developer" width={81} height={67} class="w-full"/>
+					</a>
+				</li>
 			</ul>
 		</div>
 	</div>

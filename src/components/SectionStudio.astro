@@ -1,14 +1,15 @@
 ---
+import { Image } from "astro:assets";
 interface Props {
 	id: string;
 	header: string;
 	text: string;
-	image1: string;
-	image2: string;
-	image3: string;
-	image4: string;
-	image5: string;
-	image6: string;
+	image1: Object;
+	image2: Object;
+	image3: Object;
+	image4: Object;
+	image5: Object;
+	image6: Object;
 }
 
 const {
@@ -31,22 +32,22 @@ const {
 	<p>{text}</p>
 	<div class="grid grid-cols-2 md:grid-cols-5 grid-rows-2 gap-3 mt-5">
 		<div class="col-span-2 overflow-hidden">
-			<img src={image1} alt=`studio {$name} picture` class="object-cover w-full h-full">
+			<Image src={image1} alt=`studio {$name} picture` format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="overflow-hidden">
-			<img src={image2} alt=`studio picture` class="object-cover w-full h-full">
+			<Image src={image2} alt=`studio {$name} picture` format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="hidden md:block col-span-2 overflow-hidden">
-			<img src={image3} alt=`studio picture` class="object-cover w-full h-full">
+			<Image src={image3} alt=`studio {$name} picture` format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="overflow-hidden">
-			<img src={image4} alt=`studio picture` class="object-cover w-full h-full">
+			<Image src={image4} alt=`studio {$name} picture` format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="col-span-2 overflow-hidden">
-			<img src={image5} alt=`studio picture` class="object-cover w-full h-full">
+			<Image src={image5} alt=`studio {$name} picture` format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="col-span-2 overflow-hidden">
-			<img src={image6} alt=`studio picture` class="object-cover w-full h-full">
+			<Image src={image6} alt=`studio {$name} picture` format="avif" class="object-cover w-full h-full" />
 		</div>
 	</div>
 </section>

@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { Icon } from 'astro-icon';
 import contactData from "../data/contactData";
 ---
@@ -8,7 +9,7 @@ import contactData from "../data/contactData";
 	<div class="flex items-center justify-between">
 		<!-- Logo -->
 		<a href="/" class="flex justify-center">
-			<img src="/logo0.svg" alt="Logo" width="100px" />
+			<Image src="/logo0.svg" alt="Logo" width={100} height={40} />
 		</a>
 		<!-- Menu Items -->
 		<ul class="hidden md:flex space-x-3 lg:space-x-10 pl-2">

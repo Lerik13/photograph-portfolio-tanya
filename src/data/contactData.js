@@ -6,6 +6,7 @@ const contactData = {
 	"instagram": "https://www.instagram.com/tatiana.photografi",
 	"vk": "#",
 	"whatsapp": "#",
-	"viber": "#"
+	"viber": "#",
+	"developer": "https://portfoliokv.netlify.app/"
 }
 export default contactData;

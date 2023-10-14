@@ -1,17 +1,17 @@
 ---
-
+import { Image } from "astro:assets";
 interface Props {
-	image1: string;
-	image2: string;
-	image3: string;
-	image4: string;
-	image5: string;
-	image6: string;
-	image7: string;
-	image8: string;
-	image9: string;
-	image10: string;
-	image11: string;
+	image1: Object;
+	image2: Object;
+	image3: Object;
+	image4: Object;
+	image5: Object;
+	image6: Object;
+	image7: Object;
+	image8: Object;
+	image9: Object;
+	image10: Object;
+	image11: Object;
 }
 
 const {
@@ -32,38 +32,38 @@ const {
 
 <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
 		<div class="col-span-2 overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image1} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image1} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image2} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image2} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="md:col-span-2 overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image3} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image3} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 
 		<div class="hidden md:block overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image4} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image4} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="col-span-2 overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image5} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image5} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image6} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image6} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image7} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image7} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 
 		<div class="overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image8} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image8} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image9} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image9} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="col-span-2 overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image10} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image10} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="hidden md:block overflow-hidden h-[14rem] lg:h-[16rem] xl:h-[22rem]">
-			<img src={image11} alt="photo sample" class="object-cover w-full h-full">
+			<Image src={image11} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 </div>

@@ -1,7 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
 import Portfolio from '../components/Portfolio.astro';
 import PriceListStudio from '../components/PriceListStudio.astro';
+
+import aboutImage from "../assets/portfolio/family/about.jpg";
+import image1 from "../assets/portfolio/family/1.jpg";
+import image2 from "../assets/portfolio/family/2.jpg";
+import image3 from "../assets/portfolio/family/3.jpg";
+import image4 from "../assets/portfolio/family/4.jpg";
+import image5 from "../assets/portfolio/family/5.jpg";
+import image6 from "../assets/portfolio/family/6.jpg";
+import image7 from "../assets/portfolio/family/7.jpg";
+import image8 from "../assets/portfolio/family/8.jpg";
+import image9 from "../assets/portfolio/family/9.jpg";
+import image10 from "../assets/portfolio/family/10.jpg";
+import image11 from "../assets/portfolio/family/11.jpg";
 ---
 
 <MainLayout title="Семейная cъемка" description="Tatiana Alita - Семейная cъемка">
@@ -28,7 +42,7 @@ import PriceListStudio from '../components/PriceListStudio.astro';
 			</div>
 			<!-- Image -->
 			<div class="md:w-1/3 overflow-hidden md:h-[20rem] xl:h-[24rem]">
-				<img src="img/portfolio/family/about.jpg" alt="picture in Studio" class="object-cover w-full h-full" />
+				<Image src={aboutImage} alt="Family picture" format="avif" class="object-cover w-full h-full" />
 			</div>
 		</div>
 	</section>
@@ -40,17 +54,17 @@ import PriceListStudio from '../components/PriceListStudio.astro';
 			</h2>
 			<div class="mt-6">
 				<Portfolio
-					image1="img/portfolio/family/1.jpg"
-					image2="img/portfolio/family/2.jpg"
-					image3="img/portfolio/family/3.jpg"
-					image4="img/portfolio/family/4.jpg"
-					image5="img/portfolio/family/5.jpg"
-					image6="img/portfolio/family/6.jpg"
-					image7="img/portfolio/family/7.jpg"
-					image8="img/portfolio/family/8.jpg"
-					image9="img/portfolio/family/9.jpg"
-					image10="img/portfolio/family/10.jpg"
-					image11="img/portfolio/family/11.jpg"
+					image1={image1}
+					image2={image2}
+					image3={image3}
+					image4={image4}
+					image5={image5}
+					image6={image6}
+					image7={image7}
+					image8={image8}
+					image9={image9}
+					image10={image10}
+					image11={image11}
 				/>
 			</div>
 		</div>

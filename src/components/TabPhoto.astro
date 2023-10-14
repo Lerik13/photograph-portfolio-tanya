@@ -1,15 +1,16 @@
 ---
+import { Image } from "astro:assets";
 import Button from './Button.astro';
 
 interface Props {
 	id: string;
 	href: string;
 	active?: boolean;
-	image0: string;
-	image1: string;
-	image2: string;
-	image3: string;
-	image4: string;
+	image0: Object;
+	image1: Object;
+	image2: Object;
+	image3: Object;
+	image4: Object;
 }
 
 const {
@@ -31,19 +32,24 @@ const {
 >
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 		<div class="h-[20rem] md:h-[29rem] lg:h-[33rem] xl:h-[45rem] col-span-2 row-span-2 overflow-hidden">
-			<img src={image0} alt="photo sample" class="object-cover w-full h-full">
+			<!--img src={image0} alt="photo sample" class="object-cover w-full h-full"-->
+			<Image src={image0} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
-			<img src={image1} alt="photo sample" class="object-cover w-full h-full">
+			<!--img src={image1} alt="photo sample" class="object-cover w-full h-full"-->
+			<Image src={image1} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
-			<img src={image2} alt="photo sample" class="object-cover w-full h-full">
+			<!--img src={image2} alt="photo sample" class="object-cover w-full h-full"-->
+			<Image src={image2} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
-			<img src={image3} alt="photo sample" class="object-cover w-full h-full">
+			<!--img src={image3} alt="photo sample" class="object-cover w-full h-full"-->
+			<Image src={image3} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
-			<img src={image4} alt="photo sample" class="object-cover w-full h-full">
+			<!--img src={image4} alt="photo sample" class="object-cover w-full h-full"-->
+			<Image src={image4} alt="photo sample" format="avif" class="object-cover w-full h-full" />
 		</div>
 	</div>
 	<div class="flex justify-center items-center my-5">

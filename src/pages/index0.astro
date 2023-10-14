@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import { Icon } from 'astro-icon';
 
 import MainLayout from "../layouts/MainLayout.astro";
@@ -7,50 +6,6 @@ import TabPhoto from '../components/TabPhoto.astro';
 import SectionStudio from '../components/SectionStudio.astro';
 import Button from '../components/Button.astro';
 import contactData from "../data/contactData";
-
-import heroImage from "../assets/hero.jpg";
-import aboutImage from "../assets/about.jpg";
-import work_stepsImage from "../assets/work_steps.jpg";
-
-import studio_0Image from "../assets/formats/studio/0.jpg";
-import studio_1Image from "../assets/formats/studio/1.jpg";
-import studio_2Image from "../assets/formats/studio/2.jpg";
-import studio_3Image from "../assets/formats/studio/3.jpg";
-import studio_4Image from "../assets/formats/studio/4.jpg";
-import family_0Image from "../assets/formats/family/0.jpg";
-import family_1Image from "../assets/formats/family/1.jpg";
-import family_2Image from "../assets/formats/family/2.jpg";
-import family_3Image from "../assets/formats/family/3.jpg";
-import family_4Image from "../assets/formats/family/4.jpg";
-import walk_0Image from "../assets/formats/walk/0.jpg";
-import walk_1Image from "../assets/formats/walk/1.jpg";
-import walk_2Image from "../assets/formats/walk/2.jpg";
-import walk_3Image from "../assets/formats/walk/3.jpg";
-import walk_4Image from "../assets/formats/walk/4.jpg";
-import child_0Image from "../assets/formats/child/0.jpg";
-import child_1Image from "../assets/formats/child/1.jpg";
-import child_2Image from "../assets/formats/child/2.jpg";
-import child_3Image from "../assets/formats/child/3.jpg";
-import child_4Image from "../assets/formats/child/4.jpg";
-
-import studio_lumier1Image from "../assets/studios/lumier/1.jpg";
-import studio_lumier2Image from "../assets/studios/lumier/2.jpg";
-import studio_lumier3Image from "../assets/studios/lumier/3.jpg";
-import studio_lumier4Image from "../assets/studios/lumier/4.jpg";
-import studio_lumier5Image from "../assets/studios/lumier/5.jpg";
-import studio_lumier6Image from "../assets/studios/lumier/6.jpg";
-import studio_panorama1Image from "../assets/studios/panorama/1.jpg";
-import studio_panorama2Image from "../assets/studios/panorama/2.jpg";
-import studio_panorama3Image from "../assets/studios/panorama/3.jpg";
-import studio_panorama4Image from "../assets/studios/panorama/4.jpg";
-import studio_panorama5Image from "../assets/studios/panorama/5.jpg";
-import studio_panorama6Image from "../assets/studios/panorama/6.jpg";
-import studio_ellen1Image from "../assets/studios/ellen/1.jpg";
-import studio_ellen2Image from "../assets/studios/ellen/2.jpg";
-import studio_ellen3Image from "../assets/studios/ellen/3.jpg";
-import studio_ellen4Image from "../assets/studios/ellen/4.jpg";
-import studio_ellen5Image from "../assets/studios/ellen/5.jpg";
-import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 ---
 
 <MainLayout>
@@ -81,7 +36,7 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 			</div>
 			<!-- Image -->
 			<div class="md:w-1/2">
-				<Image src={heroImage} alt="Tatiana Anita hero photo" format="avif" />
+				<img src ="img/hero.jpg" alt="Tatiana Anita hero photo" />
 			</div>
 		</div>
 	</section>
@@ -117,7 +72,7 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 			</div>
 			<!-- Image -->
 			<div class="md:w-1/2 overflow-hidden lg:h-[46rem]">
-				<Image src={aboutImage} alt="Tatiana Anita about picture" format="avif" class="object-cover w-full h-full" />
+				<img src="img/about.jpg" alt="Tatiana Anita about picture" class="object-cover w-full h-full" />
 			</div>
 		</div>
 	</section>
@@ -217,45 +172,43 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 			<div class="mt-6 relative">
 				<TabPhoto
 					id="panel-studio"
+					image0="img/formats/studio/0.jpg"
+					image1="img/formats/studio/1.jpg"
+					image2="img/formats/studio/2.jpg"
+					image3="img/formats/studio/3.jpg"
+					image4="img/formats/studio/4.jpg"
 					href="/studio-portfolio"
 					active={true}
-					image0={studio_0Image}
-					image1={studio_1Image}
-					image2={studio_2Image}
-					image3={studio_3Image}
-					image4={studio_4Image}
 				/>
 				<TabPhoto
 					id="panel-family"
+					image0="img/formats/family/0.jpg"
+					image1="img/formats/family/1.jpg"
+					image2="img/formats/family/2.jpg"
+					image3="img/formats/family/3.jpg"
+					image4="img/formats/family/4.jpg"
 					href="/family-portfolio"
-					image0={family_0Image}
-					image1={family_1Image}
-					image2={family_2Image}
-					image3={family_3Image}
-					image4={family_4Image}
 				/>
-				
 				<TabPhoto
 					id="panel-walk"
-					imageFolder = "formats/walk"
+					image0="img/formats/walk/0.jpg"
+					image1="img/formats/walk/1.jpg"
+					image2="img/formats/walk/2.jpg"
+					image3="img/formats/walk/3.jpg"
+					image4="img/formats/walk/4.jpg"
 					href="/walk-portfolio"
-					image0={walk_0Image}
-					image1={walk_1Image}
-					image2={walk_2Image}
-					image3={walk_3Image}
-					image4={walk_4Image}
 				/>
 				<TabPhoto
 					id="panel-child"
-					imageFolder = "formats/child"
+					image0="img/formats/child/0.jpg"
+					image1="img/formats/child/1.jpg"
+					image2="img/formats/child/2.jpg"
+					image3="img/formats/child/3.jpg"
+					image4="img/formats/child/4.jpg"
 					href="child-portfolio"
-					image0={child_0Image}
-					image1={child_1Image}
-					image2={child_2Image}
-					image3={child_3Image}
-					image4={child_4Image}
 				/>
 			</div>
+
 		</div>
 	</section>
 
@@ -269,7 +222,7 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 				<!-- Left side -->
 				<div class="flex flex-col space-y-8 md:w-1/3 md:min-w-[280px] my-10 md:mt-0 ">
 					<div>
-						<Image src={work_stepsImage} alt="Work Steps of Photographer" format="avif" class="object-cover w-full h-full md:min-h-[400px] lg:max-h-[420px]" />
+						<img src="img/work-steps.jpg" alt="Work Steps of Photographer" class="object-cover w-full h-full md:min-h-[400px] lg:max-h-[420px]" />
 					</div>
 					<div class="flex justify-center md:justify-start">
 						<Button href="#contacts" text="Записаться на фотосессию" />
@@ -332,34 +285,34 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 				id="studio-lumier"
 				header='Зал "ЛЮМЬЕР"'
 				text="Территориально ст.метро пл.Ленина"
-				image1={studio_lumier1Image}
-				image2={studio_lumier2Image}
-				image3={studio_lumier3Image}
-				image4={studio_lumier4Image}
-				image5={studio_lumier5Image}
-				image6={studio_lumier6Image}
+				image1="img/studios/lumier/1.jpg"
+				image2="img/studios/lumier/2.jpg"
+				image3="img/studios/lumier/3.jpg"
+				image4="img/studios/lumier/4.jpg"
+				image5="img/studios/lumier/5.jpg"
+				image6="img/studios/lumier/6.jpg"
 			/>
 			<SectionStudio
 				id="studio-panorama"
 				header='Зал "ПАНОРАМНЫЙ"'
 				text="Территориально ст.метро Петроградская"
-				image1={studio_panorama1Image}
-				image2={studio_panorama2Image}
-				image3={studio_panorama3Image}
-				image4={studio_panorama4Image}
-				image5={studio_panorama5Image}
-				image6={studio_panorama6Image}
+				image1="img/studios/panorama/1.jpg"
+				image2="img/studios/panorama/2.jpg"
+				image3="img/studios/panorama/3.jpg"
+				image4="img/studios/panorama/4.jpg"
+				image5="img/studios/panorama/5.jpg"
+				image6="img/studios/panorama/6.jpg"
 			/>
 			<SectionStudio
 				id="studio-ellen"
 				header='Зал "ЭЛЛЕН"'
 				text="Территориально ст.метро пр.Лиговский"
-				image1={studio_ellen1Image}
-				image2={studio_ellen2Image}
-				image3={studio_ellen3Image}
-				image4={studio_ellen4Image}
-				image5={studio_ellen5Image}
-				image6={studio_ellen6Image}
+				image1="img/studios/ellen/1.jpg"
+				image2="img/studios/ellen/2.jpg"
+				image3="img/studios/ellen/3.jpg"
+				image4="img/studios/ellen/4.jpg"
+				image5="img/studios/ellen/5.jpg"
+				image6="img/studios/ellen/6.jpg"
 			/>
 			<div class="flex justify-center">
 				<Button href="#contacts" text="Записаться на фотосессию" />
@@ -378,7 +331,7 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 				<div class="reviews flex">
 				</div>
 				<button id="reviews-arrow-right" class="arrow w-[35px] absolute top-[calc(50%+2rem)] -right-3 hover:-right-4 hover:text-brightRed focus:text-brightRed transition-all duration-300 ease-out bg-darkGray rounded-full">
-					<Icon name="lucide:arrow-right" width="36px" class="" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
 				</button>
 			</div>
 		</div>

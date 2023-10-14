@@ -5,7 +5,7 @@ function loadReviews(review) {
 	return `
 		<div class="review grid grid-cols-1 md:grid-cols-6 max-w-full flex flex-col md:flex-row flex-grow shrink-0 basis-full">
 			<div class="h-[18rem] sm:h-[18rem] md:h-auto lg:h-[22rem] xl:h-[24rem] col-span-2 overflow-hidden">
-				<img src="${review.headshot}" alt="${review.name}" class="object-cover w-full h-full" />
+				<Image src="${review.headshot}" alt="${review.name}" format="avif" class="object-cover w-full h-full" />
 			</div>
 			<div class="h-[31rem] sm:h-[26rem] md:h-auto lg:h-[22rem] xl:h-[24rem] col-span-4 flex flex-col space-y-6 px-5 md:px-10 xl:px-20 py-10 bg-veryLightGray text-darkGray">
 				<p class="font-serif text-brightRed text-xl">
