@@ -19,7 +19,7 @@ Main page should include:
 - block with Questions & Answers,
 - footer with navigation links, contacts, social-media links.
 
-*using technologies: Astro framework & Tailwind CSS library*
+*using technologies: Astro framework & Tailwind CSS library, Figma*
 
 ![Main Page - mobile](https://github.com/Lerik13/photograph-portfolio-tanya/blob/main/screenshots/0.jpg)
 
