@@ -170,7 +170,7 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 			</h2>
 			<div 
 				role="tablist"
-				aria-label="tabs"
+				aria-label="Tabs Photoshoot Formats"
 				class="w-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-3 col-auto items-center px-[3px] overflow-hidden transition"
 			>
 				<button
@@ -378,7 +378,7 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 			<div class="flex space-x-2 mt-10 overflow-hidden">
 				<div class="reviews flex">
 				</div>
-				<button id="reviews-arrow-right" class="arrow w-[35px] absolute top-[calc(50%+2rem)] -right-3 hover:-right-4 hover:text-brightRed focus:text-brightRed transition-all duration-300 ease-out bg-darkGray rounded-full">
+				<button id="reviews-arrow-right" aria-label="Review Arrow Right" class="arrow w-[35px] absolute top-[calc(50%+2rem)] -right-3 hover:-right-4 hover:text-brightRed focus:text-brightRed transition-all duration-300 ease-out bg-darkGray rounded-full">
 					<Icon name="lucide:arrow-right" width="36px" class="" />
 				</button>
 			</div>
@@ -395,10 +395,10 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 				<!-- Left side -->
 				<div class="flex flex-col gap-y-6 w-full md:w-1/2 md:min-w-[280px] my-10 md:mt-0">
 					<div class="flex flex-col gap-y-1 mt-3">
-						<a href=`tel:${contactData.phoneValue}` class="text-xl" >
+						<a href=`tel:${contactData.phoneValue}` class="text-xl" aria-label="Call me">
 							<span>{contactData.phoneText}</span>
 						</a>
-						<a href=`email:${contactData.email}` class="text-xl" >
+						<a href=`email:${contactData.email}` class="text-xl" aria-label="Email me">
 							<span>{contactData.email}</span>
 						</a>
 					</div>
@@ -408,16 +408,16 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 						<span>ул. Авиационная, дом 2</span>
 					</div>
 					<div class="flex gap-x-4">
-						<a href=`${contactData.vk}` target="blank" class="flex justify-center items-center bg-darkGray">
+						<a href=`${contactData.vk}` aria-label="Contact me in VKontakte" target="_blank" class="flex justify-center items-center bg-darkGray">
 							<Icon name="el:vkontakte" width="36px" class="text-brightRed rounded-full" />
 						</a>
-						<a href=`${contactData.facebook}` target="blank" class="flex justify-center items-center bg-darkGray">
+						<a href=`${contactData.facebook}` aria-label="Contact me in Facebook" target="_blank" class="flex justify-center items-center bg-darkGray">
 							<Icon name="simple-icons:facebook" width="36px" class="text-brightRed" />
 						</a>
-						<a href=`${contactData.instagram}` target="blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+						<a href=`${contactData.instagram}` aria-label="Contact me in Instagram" target="_blank" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
 							<Icon name="ri:instagram-line" width="32px" class="text-darkGray" />
 						</a>
-						<a href=`tel:${contactData.phoneValue}` class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
+						<a href=`tel:${contactData.phoneValue}` aria-label="" class="flex justify-center items-center w-[36px] h-[36px] rounded-full bg-brightRed">
 							<Icon name="ri:phone-fill" width="28px" class="text-darkGray" />
 						</a>
 					</div>
@@ -428,8 +428,7 @@ import studio_ellen6Image from "../assets/studios/ellen/6.jpg";
 					<input class="appearance-none border-b border-veryLightGray w-full py-5 bg-darkGray leading-tight focus:outline-none" id="phone" name="phone" type="text" placeholder="+7 (999) 999-99-99" required>
 					<textarea id="question" name="question" rows="3" class="w-full bg-darkGray border-b border-veryLightGray py-5 focus:outline-none" placeholder="Ваш вопрос"></textarea>
 					<div class="flex justify-center md:justify-start mt-8">
-						<!--Button text="Отправить" isSubmit={true} /-->
-						<button type="submit" class="p-5 align-baseline border px-16 hover:px-20 hover:border-brightRed focus:px-20 focus:border-brightRed transition-all duration-500 ease-out">
+						<button type="submit" aria-label="Send Form" class="btn px-14">
 							Отправить
 						</button>
 					</div>

@@ -3,7 +3,7 @@ let question_open;
 function loadFAQ(faq) {
 	return `
 		<li class="border-t border-brightRed py-4">
-			<a id="${faq.id}" href="#" class="faq_question font-serif text-xl">
+			<a id="${faq.id}" href="#" aria-label="Read the answer of this question" class="faq_question font-serif text-xl">
 				${faq.question}
 			</a>
 			<div class="faq_answer hidden pt-2 pl-4 duration-500 ease-out transition-all">

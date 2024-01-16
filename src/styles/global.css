@@ -8,7 +8,6 @@
 }
 
 body {
-	//background-color: var(--darkGray);
 	color: var(--veryLightGray);
 }
 
@@ -88,7 +87,6 @@ body {
 }
 
 ul.square {
-	//list-style-type: square;
 	list-style: none;
 }
 ul.square li {
@@ -103,6 +101,29 @@ ul.square li:before {
 	transform: translateY(-50%);
 	width: 8px;
 	height: 8px;
-	//background-color: var(--veryLightGray);
 	border: 1px solid var(--veryLightGray);
+}
+
+.btn {
+	border: 1px solid var(--veryLightGray);
+	padding: 20px;
+	vertical-align: baseline;
+	transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+.btn:hover, .btn:focus {
+	box-shadow: var(--brightRed) 5px 5px;
+}
+
+.btn-red {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	color: var(--brightRed);
+	border: 1px solid var(--brightRed);
+	padding: 20px;
+	vertical-align: baseline;
+	transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+.btn-red:hover, .btn-red:focus {
+	box-shadow: black 5px 5px;
 }
