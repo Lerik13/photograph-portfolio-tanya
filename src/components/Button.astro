@@ -14,11 +14,11 @@ const {
 } = Astro.props as Props;
 ---
 {isSubmit ?
-	<button type="submit" class="btn" aria-label={desc && text}>
+	<button type="submit" class="btn" aria-label={desc || 'Book an appoinment for your photoshoot'}>
 		{text}
 	</button>
 :
-	<a href={href} class="btn" aria-label={desc && text}>
+	<a href={href} class="btn" aria-label={desc || text}>
 		{text}
 	</a>
 }
