@@ -16,10 +16,10 @@ Main page should include:
 - samples of photo studios where artist prefer to work,
 - reviews from clients,
 - contact form with links to social media,
-- block with Questions & Answers
-- footer with navigation links, contacts, social-media links
+- block with Questions & Answers,
+- footer with navigation links, contacts, social-media links.
 
-*using technologies: Astro framework & Tailwind CSS library*
+*using technologies: Astro framework & Tailwind CSS library, Figma*
 
 ![Main Page - mobile](https://github.com/Lerik13/photograph-portfolio-tanya/blob/main/screenshots/0.jpg)
 
@@ -37,4 +37,4 @@ In additional pages on the top of the page you can find breadcrumbs for easy nav
 
 404-page:
 
-![Contact Form](https://github.com/Lerik13/photograph-portfolio-tanya/blob/main/screenshots/404.jpg)
+![404 page](https://github.com/Lerik13/photograph-portfolio-tanya/blob/main/screenshots/404.jpg)
