@@ -6,7 +6,7 @@ import contactData from "../data/contactData";
 <div class="container flex flex-col md:flex-row items-start px-6 mx-auto mt-20 mb-10 justify-between text-sm gap-4">
 	<div class="flex flex-row gap-4 sm:gap-12 md:gap-20 lg:gap-32">
 		<div class="flex flex-col gap-y-3">
-			<h6 class="text-base font-semibold">TatianaAlita 2023</h6>
+			<h6 class="text-base font-semibold">TatianaAlita <span id="year"></span></h6>
 			<ul class="flex flex-col gap-y-2">
 				<li>&copy; Все права защищены</li>
 				<li>Договор оферты</li>
@@ -49,3 +49,8 @@ import contactData from "../data/contactData";
 		</div>
 	</div>
 </div>
+
+  <script>
+    const yearSpan = document.getElementById('year');
+    yearSpan.textContent = String(new Date().getFullYear());
+  </script>

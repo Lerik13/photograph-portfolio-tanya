@@ -1,14 +1,63 @@
+@import 'tailwindcss';
+
 :root {
 	--font-sans: "Montserrat", "Arial", sans-serif;
-	--font-serif: "Bona+Nova", "Times New Roman", serif;
-	--brightRed: hsl(2, 82%, 60%);
-	--darkGray: hsl(0, 0%, 16%);
-	--navGray: hsl(0, 0%, 18%);
-	--veryLightGray: hsl(0, 0%, 98%);
+	--font-serif: "Bona Nova", "Times New Roman", serif;
+
+	--color-bright-red: hsl(2 82% 60%);
+	--color-dark-gray: hsl(0 0% 16%);
+	--color-nav-gray: hsl(0 0% 18%);
+	--color-very-light-gray: hsl(0 0% 98%);
 }
 
-body {
-	color: var(--veryLightGray);
+@theme {
+	--font-sans: var(--font-sans);
+	--font-serif: var(--font-serif);
+
+	--color-bright-red: var(--color-bright-red);
+	--color-dark-gray: var(--color-dark-gray);
+	--color-nav-gray: var(--color-nav-gray);
+	--color-very-light-gray: var(--color-very-light-gray);
+}
+
+@layer base{
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+		font-family: var(--font-sans);
+		color: var(--color-very-light-gray);
+		background: var(--color-dark-gray);
+		line-height: 1.6;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	ul.square {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	ul.square li {
+		position: relative;
+		padding-left: 20px;
+	}
+
+	ul.square li:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 8px;
+		height: 8px;
+		border: 1px solid var(--color-very-light-gray);
+	}
 }
 
 /* Hamburger Menu */
@@ -21,7 +70,7 @@ body {
 	top: 24px;
 	right: 26px;
 	z-index: 30;
-	background-color: var(--darkGray);
+	background-color: var(--color-dark-gray);
 	border-radius: 50%;
 }
 
@@ -33,97 +82,90 @@ body {
 	left: 8px;
 	width: 24px;
 	height: 2px;
-	background: var(--veryLightGray);
+	background: var(--color-very-light-gray);
 	transform: rotate(0);
 	transition: all 0.5s;
 }
+
 .hamburger-middle {
 	transform: translateY(7px);
 }
+
 .hamburger-bottom {
 	transform: translateY(14px);
 }
 
 .open {
-	position: fixed;
 	transform: rotate(90deg);
-	transform: translateY(0px);
 }
+
 .open .hamburger-top {
-	transform: rotate(45deg) translateY(6px) translate(6px);
+	transform: rotate(45deg) translate(6px, 6px);
 }
+
 .open .hamburger-middle {
 	display: none;
 }
+
 .open .hamburger-bottom {
-	transform: rotate(-45deg) translateY(6px) translate(-6px);
+	transform: rotate(-45deg) translate(6px, -6px);
 }
-/* - for animation - */
+
+/* - Animations - */
 .animate-hide {
 	opacity: 0;
 	filter: blur(5px);
 	transform: translateX(-100%);
 	transition: all 1s;
 }
+
 .animate-show {
 	opacity: 1;
 	filter: blur(0);
 	transform: translateX(0);
 }
-@media(peferes-reduced-motion) {
+
+@media (prefers-reduced-motion: reduce) { 
 	.animate-hide {
 		transition: none;
 	}
 }
 
-.feature:nth-child(1) {
-	transition-delay: 400ms;
-}
-.feature:nth-child(2) {
-	transition-delay: 600ms;
-}
-.feature:nth-child(3) {
-	transition-delay: 800ms;
-}
+/* Feature delay animation */
+.feature:nth-child(1) { transition-delay: 400ms; }
+.feature:nth-child(2) { transition-delay: 600ms; }
+.feature:nth-child(3) { transition-delay: 800ms; }
 
-ul.square {
-	list-style: none;
-}
-ul.square li {
-	position: relative;
-	padding-left: 20px;
-}
-ul.square li:before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	width: 8px;
-	height: 8px;
-	border: 1px solid var(--veryLightGray);
-}
-
+/* Buttons */
 .btn {
-	border: 1px solid var(--veryLightGray);
+	background: transparent; /* was missing */
+	color: var(--color-very-light-gray);
+	border: 1px solid var(--color-very-light-gray);
 	padding: 20px;
-	vertical-align: baseline;
+	border-radius: 30px;
 	transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+	text-align: center;
+	cursor: pointer;
 }
-.btn:hover, .btn:focus {
-	box-shadow: var(--brightRed) 5px 5px;
+
+.btn:hover,
+.btn:focus {
+	box-shadow: var(--color-bright-red) 5px 5px;
 }
 
 .btn-red {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	color: var(--brightRed);
-	border: 1px solid var(--brightRed);
+	color: var(--color-bright-red);
+	border: 1px solid var(--color-bright-red);
 	padding: 20px;
-	vertical-align: baseline;
+	border-radius: 30px;
 	transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+	cursor: pointer;
 }
-.btn-red:hover, .btn-red:focus {
+
+.btn-red:hover,
+.btn-red:focus {
 	box-shadow: black 5px 5px;
 }

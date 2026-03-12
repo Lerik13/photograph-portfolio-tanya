@@ -1,23 +1,26 @@
 {
-  "name": "web-site",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.1.0",
-    "tailwindcss": "^3.3.3"
-  },
-  "devDependencies": {
-    "astro-icon": "^0.8.1",
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0",
-    "prettier-plugin-tailwindcss": "^0.5.4"
-  }
+	"name": "Photograph Portfolio",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@tailwindcss/vite": "^4.2.1",
+		"astro": "^6.0.3",
+		"astro-icon": "^1.1.5",
+		"tailwindcss": "^4.2.1"
+	},
+	"devDependencies": {
+		"@iconify-json/lucide": "^1.2.96",
+		"@iconify-json/ri": "^1.2.10",
+		"@iconify-json/simple-icons": "^1.2.73",
+		"prettier": "^3.8.1",
+		"prettier-plugin-astro": "^0.14.1",
+		"prettier-plugin-tailwindcss": "^0.7.2"
+	}
 }

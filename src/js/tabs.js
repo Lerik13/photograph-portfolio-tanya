@@ -6,13 +6,13 @@ tabs.forEach(tab => {
 		let tabTarget = tab.getAttribute("aria-controls")
 
 		tabs.forEach(t => {
-			t.classList.remove("border-brightRed");
-			t.classList.add("border-veryLightGray");
-			t.classList.remove("text-brightRed");
+			t.classList.remove("border-bright-red");
+			t.classList.add("border-very-light-gray");
+			t.classList.remove("text-bright-red");
 		})
-		tab.classList.remove("border-veryLightGray");
-		tab.classList.add("border-brightRed");
-		tab.classList.add("text-brightRed");
+		tab.classList.remove("border-very-light-gray");
+		tab.classList.add("border-bright-red");
+		tab.classList.add("text-bright-red");
 
 		panels.forEach(panel =>{
 			let panelId = panel.getAttribute("id")

@@ -2,7 +2,7 @@ let question_open;
 
 function loadFAQ(faq) {
 	return `
-		<li class="border-t border-brightRed py-4">
+		<li class="border-t border-bright-red py-4">
 			<a id="${faq.id}" href="#" aria-label="Read the answer of this question" class="faq_question font-serif text-xl">
 				${faq.question}
 			</a>
@@ -30,8 +30,6 @@ async function fetchFAQ() {
 			faq_question.addEventListener('click', (e) => {
 				e.preventDefault();
 				
-				console.log('e.target.id = '+e.target.id)
-				console.log('question_open = '+question_open)
 				if (e.target.id === question_open) {
 					e.target.nextElementSibling.classList.add('hidden');
 					question_open = null;

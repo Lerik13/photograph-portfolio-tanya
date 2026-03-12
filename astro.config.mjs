@@ -1,8 +1,23 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import tailwind from "@tailwindcss/vite";
+import icon from "astro-icon";
 
-import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+  vite: {
+    plugins: [tailwind()],
+  },
+  integrations: [
+    icon({
+      include: {
+        lucide: ["arrow-right"],
+				ri: ["phone-fill", "instagram-line", "facebook-line", "vk-line"],
+				"simple-icons": ["vk"],
+      },
+    }),
+  ],
+  image: {
+    service: {
+      entrypoint: "astro/assets/services/sharp",
+    },
+  },
 });

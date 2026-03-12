@@ -7,8 +7,8 @@ function loadReviews(review) {
 			<div class="h-[18rem] sm:h-[18rem] md:h-auto lg:h-[22rem] xl:h-[24rem] col-span-2 overflow-hidden">
 				<Image src="${review.headshot}" alt="${review.name}" format="avif" class="object-cover w-full h-full" />
 			</div>
-			<div class="h-[31rem] sm:h-[26rem] md:h-auto lg:h-[22rem] xl:h-[24rem] col-span-4 flex flex-col space-y-6 px-5 md:px-10 xl:px-20 py-10 bg-veryLightGray text-darkGray">
-				<p class="font-serif text-brightRed text-xl">
+			<div class="h-[31rem] sm:h-[26rem] md:h-auto lg:h-[22rem] xl:h-[24rem] col-span-4 flex flex-col space-y-6 px-5 md:px-10 xl:px-20 py-10 bg-very-light-gray text-dark-gray">
+				<p class="font-serif text-bright-red text-xl">
 					${review.name}
 				</p>
 				<p class="">

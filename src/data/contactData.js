@@ -7,6 +7,6 @@ const contactData = {
 	"vk": "#",
 	"whatsapp": "#",
 	"viber": "#",
-	"developer": "https://portfolio-kv.netlify.app/"
+	"developer": "https://dev-portfolio-kv.netlify.app/"
 }
 export default contactData;

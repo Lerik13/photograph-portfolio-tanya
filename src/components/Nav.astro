@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon/components";
 import contactData from "../data/contactData";
 ---
 
@@ -13,15 +13,15 @@ import contactData from "../data/contactData";
 		</a>
 		<!-- Menu Items -->
 		<ul class="hidden md:flex space-x-3 lg:space-x-10 pl-2">
-			<li><a href="/#about" aria-label="Read about me as photograph" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Обо мне</a></li>
-			<li><a href="/#formats-photoshoots" aria-label="Know more about different photoshoot formats" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Форматы съемок</a></li>
-			<li><a href="/#studios" aria-label="See photo studios where photograph likes to work" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Фотостудии</a></li>
-			<li><a href="/#reviews" aria-label="Observe reviews from clients" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Отзывы</a></li>
-			<li><a href="/#contacts" aria-label="How to contact with photograph" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">Контакты</a></li>
+			<li><a href="/#about" aria-label="Read about me as photograph" class="pb-2 border-b-2 border-dark-gray hover:border-very-light-gray duration-500 ease-out transition-all">Обо мне</a></li>
+			<li><a href="/#formats-photoshoots" aria-label="Know more about different photoshoot formats" class="pb-2 border-b-2 border-dark-gray hover:border-very-light-gray duration-500 ease-out transition-all">Форматы съемок</a></li>
+			<li><a href="/#studios" aria-label="See photo studios where photograph likes to work" class="pb-2 border-b-2 border-dark-gray hover:border-very-light-gray duration-500 ease-out transition-all">Фотостудии</a></li>
+			<li><a href="/#reviews" aria-label="Observe reviews from clients" class="pb-2 border-b-2 border-dark-gray hover:border-very-light-gray duration-500 ease-out transition-all">Отзывы</a></li>
+			<li><a href="/#contacts" aria-label="How to contact with photograph" class="pb-2 border-b-2 border-dark-gray hover:border-very-light-gray duration-500 ease-out transition-all">Контакты</a></li>
 		</ul>
 		<!-- Phone number -->
 		<a href=`tel:${contactData.phoneValue}` class="hidden md:flex p-3 pr-0 items-start gap-1">
-			<Icon name="ri:phone-fill" width="18px" class="pt-[3px]" />
+			<Icon name="ri:phone-fill" width={18} class="pt-[3px]" />
 			<span>{contactData.phoneText}</span>
 		</a>
 
@@ -35,17 +35,17 @@ import contactData from "../data/contactData";
 		<!-- Mobile Menu -->
 		<div id="slideover-container" class="fixed inset-0 w-full h-full invisible z-10">
 			<div id="slideover-bg"class="absolute inset-0 w-full h-full bg-gray-900 opacity-0 z-0 duration-500 ease-out transition-all"></div>
-			<ul id="slideover"class="absolute w-56 h-full flex-col items-left self-end px-10 pt-20 space-y-10 bg-navGray top-0 right-0 translate-x-full duration-500 ease-out transition-all">
-				<li><a href="#about" aria-label="Read about me as photograph" class="nav-link hover:text-brightRed">Обо мне</a></li>
-				<li><a href="#formats-photoshoots" aria-label="Know more about different photoshoot formats" class="nav-link hover:text-brightRed">Форматы съемок</a></li>
-				<li><a href="#studios" aria-label="See photo studios where photograph likes to work" class="nav-link hover:text-brightRed">Фотостудии</a></li>
-				<li><a href="#reviews" aria-label="Observe reviews from clients" class="nav-link hover:text-brightRed">Отзывы</a></li>
-				<li><a href="#contacts" aria-label="How to contact with photograph" class="nav-link hover:text-brightRed">Контакты</a></li>
+			<ul id="slideover"class="absolute w-56 h-full flex-col items-left self-end px-10 pt-20 space-y-10 bg-nav-gray top-0 right-0 translate-x-full duration-500 ease-out transition-all">
+				<li><a href="#about" aria-label="Read about me as photograph" class="nav-link hover:text-bright-red">Обо мне</a></li>
+				<li><a href="#formats-photoshoots" aria-label="Know more about different photoshoot formats" class="nav-link hover:text-bright-red">Форматы съемок</a></li>
+				<li><a href="#studios" aria-label="See photo studios where photograph likes to work" class="nav-link hover:text-bright-red">Фотостудии</a></li>
+				<li><a href="#reviews" aria-label="Observe reviews from clients" class="nav-link hover:text-bright-red">Отзывы</a></li>
+				<li><a href="#contacts" aria-label="How to contact with photograph" class="nav-link hover:text-bright-red">Контакты</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
 
 <script>
-	import "../js/nav.js"
+	import "../js/nav.js";
 </script>
